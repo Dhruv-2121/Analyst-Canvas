@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, MapPin, Linkedin, Send, Instagram } from "lucide-react";
+import { Mail, MapPin, Linkedin, Send, Instagram, Facebook } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -64,16 +64,20 @@ export default function Contact() {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href={resumeData.personalInfo.instagram} 
+                  target="_blank" 
+                  rel="noreferrer"
                   className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all duration-300"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a 
-                  href={`mailto:${resumeData.personalInfo.email}`}
-                  className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-green-600 hover:text-white transition-all duration-300"
+                  href={resumeData.personalInfo.facebook} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Facebook className="w-5 h-5" />
                 </a>
               </div>
             </div>

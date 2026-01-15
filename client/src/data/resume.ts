@@ -24,6 +24,8 @@ export const resumeData = {
     email: "dhruvvgupta70@gmail.com",
     phone: "+91-8109637970",
     linkedin: "https://www.linkedin.com/in/dhruv-gupta-bba-bia",
+    instagram: "https://www.instagram.com/its._dhruv__",
+    facebook: "https://www.facebook.com/dhruv.gupta.75054689",
     location: "Bhopal, Madhya Pradesh",
     about: "Analytical and detail-oriented BBA BIA student with hands-on experience in SQL, Python, Power BI, and machine learning. Successfully delivered insights through real-world projects and internships at Deloitte, Quantium, and Tata Group. Skilled in data modeling, visualization, and team leadership."
   },

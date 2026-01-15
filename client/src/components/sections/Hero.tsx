@@ -28,23 +28,29 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-6 text-center md:text-left order-2 md:order-1"
         >
-          <div className="h-4" /> {/* Spacer for removed hello world */}
+          <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-2">
+            Data Analyst & Strategist
+          </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            I'm <span className="text-primary">{resumeData.personalInfo.name}</span>
+          <h1 className="text-4xl md:text-7xl font-bold tracking-tight leading-tight">
+            Turning <span className="text-primary">Raw Data</span> Into <span className="text-white/80">Actionable Insights</span>
           </h1>
           
-          <div className="text-2xl md:text-3xl font-light h-[60px] text-muted-foreground">
-            I am a{" "}
+          <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0 leading-relaxed">
+            I help businesses make data-driven decisions through advanced analytics, predictive modeling, and interactive visualization.
+          </p>
+          
+          <div className="text-xl md:text-2xl font-light h-[40px] text-muted-foreground pt-2">
+            Specializing in{" "}
             <TypeAnimation
               sequence={[
-                "Data Analyst",
+                "Power BI Development",
                 2000,
-                "Business Analyst",
+                "SQL Analytics",
                 2000,
-                "Power BI Developer",
+                "Python Programming",
                 2000,
-                "Python Developer",
+                "Business Intelligence",
                 2000
               ]}
               wrapper="span"
@@ -54,11 +60,7 @@ export default function Hero() {
             />
           </div>
           
-          <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0 leading-relaxed">
-            {resumeData.personalInfo.about}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-6">
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-white gap-2 h-12 px-8 rounded-full shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_30px_rgba(56,189,248,0.5)] transition-all duration-300"
