@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import { resumeData } from "@/data/resume";
-import generatedAvatar from "@assets/generated_images/professional_male_data_analyst_avatar.png";
+import userPhoto from "@assets/WhatsApp_Image_2025-12-23_at_10.46.02_PM_1768468564366.jpeg";
 import { FaChartBar } from "react-icons/fa";
 import resumePdf from "@assets/DHRUV_GUPTA_RESUME_2026_(2)_1768467630098.pdf";
 
@@ -80,7 +80,7 @@ export default function Hero() {
           </div>
         </motion.div>
         
-        {/* Right Content - Avatar */}
+        {/* Right Content - Profile Photo */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -100,12 +100,12 @@ export default function Hero() {
               className="absolute inset-4 rounded-full border border-dashed border-white/10"
             />
             
-            {/* Avatar Image */}
-            <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-white/5 shadow-2xl z-10">
+            {/* Profile Photo */}
+            <div className="absolute inset-8 rounded-3xl overflow-hidden border-4 border-white/5 shadow-2xl z-10 bg-slate-900">
               <img 
-                src={generatedAvatar} 
-                alt="Profile" 
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                src={userPhoto} 
+                alt="Dhruv Gupta" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
 
@@ -115,7 +115,7 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -top-4 -right-4 glass px-4 py-2 rounded-xl border border-white/10 shadow-lg z-20"
             >
-              <span className="font-bold text-primary">5★</span> SQL HackerRank
+              <span className="font-bold text-primary">5★</span> SQL
             </motion.div>
             
             <motion.div 
@@ -123,7 +123,7 @@ export default function Hero() {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               className="absolute bottom-10 -left-8 glass px-4 py-2 rounded-xl border border-white/10 shadow-lg z-20 flex items-center gap-2"
             >
-              <FaChartBar className="text-[#F2C811]" /> Power BI Expert
+              <FaChartBar className="text-[#F2C811]" /> Power BI
             </motion.div>
           </div>
         </motion.div>

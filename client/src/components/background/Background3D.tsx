@@ -1,29 +1,41 @@
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { SiTableau, SiPython, SiMysql, SiPandas, SiNumpy, SiScikitlearn } from "react-icons/si";
 import { FaChartBar, FaFileExcel } from "react-icons/fa";
-import { useRef } from "react";
+import { useMemo } from "react";
 
 const FloatingIcon = ({ Icon, delay, x, y, size, color }: { Icon: any, delay: number, x: number, y: number, size: number, color: string }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 0, y: 0 }}
+      initial={{ opacity: 0 }}
       animate={{ 
-        opacity: [0.2, 0.5, 0.2],
-        x: [0, x, 0],
-        y: [0, y, 0],
-        rotate: [0, 10, -10, 0]
+        opacity: [0.3, 0.6, 0.3],
+        rotate: 360,
+        y: [0, -15, 0]
       }}
       transition={{ 
-        duration: 10 + Math.random() * 10, 
+        duration: 8 + Math.random() * 5, 
         repeat: Infinity, 
         delay: delay,
         ease: "easeInOut" 
       }}
       className="absolute z-0 pointer-events-none"
-      style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%` }}
+      style={{ left: `${x}%`, top: `${y}%` }}
     >
-      <Icon size={size} color={color} className="opacity-20 blur-[1px]" />
+      <Icon size={size} color={color} className="opacity-40" />
     </motion.div>
+  );
+};
+
+const ZigZagLine = ({ color, top }: { color: string, top: string }) => {
+  return (
+    <div className="absolute left-0 right-0 h-px overflow-hidden pointer-events-none" style={{ top }}>
+      <svg width="100%" height="20" className="opacity-10">
+        <pattern id="zigzag" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+          <path d="M0 10 L10 0 L30 20 L40 10" fill="transparent" stroke={color} strokeWidth="1" />
+        </pattern>
+        <rect width="100%" height="20" fill="url(#zigzag)" />
+      </svg>
+    </div>
   );
 };
 
@@ -39,28 +51,57 @@ export default function Background3D() {
     { Icon: SiScikitlearn, color: "#F7931E" },
   ];
 
-  // Create an array of 20 random floating icons
-  const floatingIcons = Array.from({ length: 20 }).map((_, i) => {
-    const iconData = icons[i % icons.length];
-    return (
-      <FloatingIcon
-        key={i}
-        Icon={iconData.Icon}
-        delay={i * 0.5}
-        x={Math.random() * 100 - 50}
-        y={Math.random() * 100 - 50}
-        size={40 + Math.random() * 60}
-        color={iconData.color}
-      />
-    );
-  });
+  // Triangular pattern positioning
+  const triangularIcons = useMemo(() => {
+    const points = [
+      { x: 20, y: 20 }, { x: 50, y: 15 }, { x: 80, y: 20 },
+      { x: 35, y: 45 }, { x: 65, y: 45 },
+      { x: 50, y: 75 }
+    ];
+    return points.map((p, i) => {
+      const iconData = icons[i % icons.length];
+      return (
+        <FloatingIcon
+          key={i}
+          Icon={iconData.Icon}
+          delay={i * 0.4}
+          x={p.x}
+          y={p.y}
+          size={50 + Math.random() * 30}
+          color={iconData.color}
+        />
+      );
+    });
+  }, []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-900/50 via-slate-950 to-slate-950">
-      <div className="absolute inset-0 opacity-30">
-        {floatingIcons}
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 bg-[#020617]">
+      <div className="absolute inset-0">
+        {triangularIcons}
       </div>
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+      
+      {/* Zig Zag Lines */}
+      <ZigZagLine color="#38bdf8" top="25%" />
+      <ZigZagLine color="#38bdf8" top="50%" />
+      <ZigZagLine color="#38bdf8" top="75%" />
+
+      {/* 3D Animated Mesh/Sphere Placeholder */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-10">
+        <motion.div
+          animate={{ 
+            rotateX: 360,
+            rotateY: 360,
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="w-[600px] h-[600px] border border-primary/20 rounded-full preserve-3d"
+          style={{ transform: "rotateX(45deg) rotateY(45deg)" }}
+        >
+          <div className="absolute inset-0 border border-primary/10 rounded-full rotate-x-90" />
+          <div className="absolute inset-0 border border-primary/10 rounded-full rotate-y-90" />
+        </motion.div>
+      </div>
+      
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(15,23,42,0)_0%,rgba(2,6,23,0.8)_100%)]" />
     </div>
   );
 }
