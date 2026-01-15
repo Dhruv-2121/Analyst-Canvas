@@ -108,6 +108,12 @@ export const resumeData = {
   ],
   leadership: [
     {
+      role: "Operations Head & Lead Coordinator",
+      organization: "Techno Management Fest, LNCT University",
+      period: "Sep 2024 – Dec 2024",
+      description: "Led the largest student-run management event attended by over 2,000 students and faculty. Oversaw cross-functional operations including finance, logistics, sponsorships, stall allocation, and department coordination. Managed task delegation, secured sponsorships, and supervised technical setup and security logistics."
+    },
+    {
       role: "Co-Operation Head",
       organization: "BIA Unified Data Science Club",
       period: "Oct 2024 – Present",
