@@ -1,7 +1,7 @@
 import { useRoute, useLocation } from "wouter";
 import { resumeData } from "@/data/resume";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, User, Code, Share2, File } from "lucide-react";
+import { ArrowLeft, Calendar, User, Code, Share2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import Background3D from "@/components/background/Background3D";
@@ -126,18 +126,6 @@ export default function ProjectDetails() {
                   </ul>
                 </div>
               </div>
-
-              {(project.presentationUrl) && (
-                <div className="pt-8">
-                  <Button 
-                    size="lg" 
-                    className="bg-primary hover:bg-primary/90 text-white gap-2"
-                    onClick={() => window.open(project.presentationUrl, "_blank")}
-                  >
-                    <File className="w-5 h-5" /> View Project Presentation
-                  </Button>
-                </div>
-              )}
             </div>
           </div>
         </motion.div>
