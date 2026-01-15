@@ -17,10 +17,6 @@ import quantiumCert from "@assets/Quantium_internship_1768471022202.jpeg";
 import deloitteCert from "@assets/deloitte_internship_1768471022160.jpeg";
 import tataCert from "@assets/tata_group_internship_1768471022205.jpeg";
 
-// Import project presentations
-import bostonPpt from "@assets/Machine_Learning_Project_(1)_1768471496584.pptx";
-import olaPpt from "@assets/OLA_RIDE_BOOKING_PROJECT_1768471816348.pptm";
-
 export const resumeData = {
   personalInfo: {
     name: "Dhruv Gupta",
@@ -75,7 +71,7 @@ export const resumeData = {
       shortDescription: "Executed 25+ advanced SQL queries to analyze customer behavior and route profitability.",
       fullDescription: "Executed 25+ advanced SQL queries on a 5,000+ record simulated ride-booking dataset to analyze customer behavior, route profitability, and ride trends. Segmented customers by fare spending, ranked drivers by performance, and identified surge pricing routes using fare/km logic. Conducted root cause and aggregation-based analysis to report operational inefficiencies.",
       image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop",
-      presentation: olaPpt
+      presentationUrl: "/attached_assets/OLA_RIDE_BOOKING_PROJECT_1768471816348.pptm"
     },
     {
       id: "boston-housing",
@@ -84,7 +80,7 @@ export const resumeData = {
       shortDescription: "Developed a machine learning model to predict housing prices based on socio-economic factors.",
       fullDescription: "Developed a machine learning model using Python (sklearn, pandas) to predict housing prices based on various socio-economic factors. Performed data preprocessing, exploratory analysis, and trained regression models with model evaluation. Showcased end-to-end implementation of machine learning pipelines and practical application of coding for predictive analytics.",
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop",
-      presentation: bostonPpt
+      presentationUrl: "/attached_assets/Machine_Learning_Project_(1)_1768471496584.pptx"
     },
     {
       id: "who-website",

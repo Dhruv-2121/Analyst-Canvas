@@ -127,12 +127,12 @@ export default function ProjectDetails() {
                 </div>
               </div>
 
-              {project.presentation && (
+              {(project.presentationUrl) && (
                 <div className="pt-8">
                   <Button 
                     size="lg" 
                     className="bg-primary hover:bg-primary/90 text-white gap-2"
-                    onClick={() => window.open(project.presentation, "_blank")}
+                    onClick={() => window.open(project.presentationUrl, "_blank")}
                   >
                     <File className="w-5 h-5" /> View Project Presentation
                   </Button>
