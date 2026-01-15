@@ -93,7 +93,11 @@ export const resumeData = {
     { title: "5★ SQL Badge", issuer: "HackerRank", date: "May 2025", description: "Demonstrated advanced SQL skills in query design, joins, aggregations, and optimization." },
     { title: "Power BI Badge", issuer: "Microsoft Learn", date: "May 2025", description: "Completed Microsoft’s guided Power BI learning path covering data modeling, DAX, and dashboard creation." },
     { title: "Exploratory Data Analysis", issuer: "Accenture & NASSCOM", date: "July 2025", description: "Aligned with NASSCOM industry competency standards." },
-    { title: "Data Analytics Essentials", issuer: "CISCO Networking Academy", date: "Oct 2025", description: "Comprehensive data analytics foundation." }
+    { title: "Data Analytics Essentials", issuer: "CISCO Networking Academy", date: "Oct 2025", description: "Comprehensive data analytics foundation." },
+    { title: "Mastering GenAI & ChatGPT Course", issuer: "GeeksforGeeks", date: "June 2025", description: "Comprehensive course on Generative AI and prompt engineering." },
+    { title: "AI for Beginners", issuer: "HP LIFE", date: "June 2025", description: "Fundamental principles of Artificial Intelligence." },
+    { title: "SQL (Intermediate)", issuer: "HackerRank", date: "April 2025", description: "Intermediate SQL skills including complex joins and subqueries." },
+    { title: "SQL (Basic)", issuer: "HackerRank", date: "March 2025", description: "Fundamental SQL queries and data manipulation." }
   ],
   education: [
     {
