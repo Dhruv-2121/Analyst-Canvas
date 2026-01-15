@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { resumeData } from "@/data/resume";
 import { Calendar, Building2, Award } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function Experience() {
   return (
@@ -60,10 +67,28 @@ export default function Experience() {
                       {exp.description}
                     </p>
 
-                    <div className="flex items-center gap-2 text-xs text-primary/80 cursor-pointer hover:underline">
-                      <Award className="w-4 h-4" />
-                      <span>View Certificate</span>
-                    </div>
+                    {exp.certificate && (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <div className="flex items-center gap-2 text-xs text-primary/80 cursor-pointer hover:underline hover:text-primary transition-colors">
+                            <Award className="w-4 h-4" />
+                            <span>View Certificate</span>
+                          </div>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-3xl glass-card border-white/10">
+                          <DialogHeader>
+                            <DialogTitle className="text-white">Internship Certificate - {exp.company}</DialogTitle>
+                          </DialogHeader>
+                          <div className="mt-4 rounded-lg overflow-hidden border border-white/5">
+                            <img 
+                              src={exp.certificate} 
+                              alt={`${exp.company} Internship Certificate`} 
+                              className="w-full h-auto object-contain"
+                            />
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    )}
                   </div>
                 </div>
               </div>

@@ -38,7 +38,7 @@ export default function ProjectDetails() {
       <div className="relative z-10 container max-w-4xl mx-auto px-4 py-12">
         <Button 
           variant="ghost" 
-          className="mb-8 hover:bg-white/10"
+          className="mb-8 hover:bg-white/10 text-white"
           onClick={() => setLocation("/")}
         >
           <ArrowLeft className="w-4 h-4 mr-2" /> Back to Portfolio
@@ -60,10 +60,10 @@ export default function ProjectDetails() {
               <div className="absolute bottom-8 left-8 right-8 z-20">
                 <div className="flex gap-2 mb-4">
                   {project.skills.map(skill => (
-                    <Badge key={skill} className="bg-primary/80 hover:bg-primary border-none">{skill}</Badge>
+                    <Badge key={skill} className="bg-primary/80 hover:bg-primary border-none text-white">{skill}</Badge>
                   ))}
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold">{project.title}</h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-white">{project.title}</h1>
               </div>
             </div>
 
@@ -75,7 +75,7 @@ export default function ProjectDetails() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground uppercase tracking-wider">Role</p>
-                    <p className="font-medium">Data Analyst</p>
+                    <p className="font-medium text-white">Data Analyst</p>
                   </div>
                 </div>
                 
@@ -85,7 +85,7 @@ export default function ProjectDetails() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground uppercase tracking-wider">Date</p>
-                    <p className="font-medium">2025</p>
+                    <p className="font-medium text-white">2025</p>
                   </div>
                 </div>
 
@@ -95,19 +95,19 @@ export default function ProjectDetails() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground uppercase tracking-wider">Tech Stack</p>
-                    <p className="font-medium">{project.skills.slice(0, 2).join(", ")} +</p>
+                    <p className="font-medium text-white">{project.skills.slice(0, 2).join(", ")} +</p>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold">Project Overview</h2>
+                <h2 className="text-2xl font-bold text-white">Project Overview</h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
                   {project.fullDescription}
                 </p>
                 
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                  <h3 className="font-bold mb-4 flex items-center gap-2">
+                  <h3 className="font-bold mb-4 flex items-center gap-2 text-white">
                     <Share2 className="w-4 h-4 text-primary" /> Key Outcomes
                   </h3>
                   <ul className="space-y-3">
@@ -125,11 +125,6 @@ export default function ProjectDetails() {
                     </li>
                   </ul>
                 </div>
-              </div>
-
-              <div className="pt-8 flex gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">View Source Code</Button>
-                <Button size="lg" variant="outline" className="border-white/10 hover:bg-white/5">Live Demo</Button>
               </div>
             </div>
           </div>

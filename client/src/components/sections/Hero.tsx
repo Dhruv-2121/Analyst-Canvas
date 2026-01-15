@@ -28,9 +28,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-6 text-center md:text-left order-2 md:order-1"
         >
-          <div className="inline-block px-4 py-2 rounded-full glass border border-primary/20 text-primary font-mono text-sm mb-4">
-             &lt;Hello World /&gt;
-          </div>
+          <div className="h-4" /> {/* Spacer for removed hello world */}
           
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             I'm <span className="text-primary">{resumeData.personalInfo.name}</span>

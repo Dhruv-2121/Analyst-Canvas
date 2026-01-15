@@ -12,6 +12,11 @@ import {
 } from "react-icons/si";
 import { FaChartLine, FaBrain, FaDatabase, FaUsers, FaLightbulb, FaChartBar, FaFileExcel } from "react-icons/fa";
 
+// Import internship certificates
+import quantiumCert from "@assets/Quantium_internship_1768471022202.jpeg";
+import deloitteCert from "@assets/deloitte_internship_1768471022160.jpeg";
+import tataCert from "@assets/tata_group_internship_1768471022205.jpeg";
+
 export const resumeData = {
   personalInfo: {
     name: "Dhruv Gupta",
@@ -38,21 +43,24 @@ export const resumeData = {
       role: "Virtual Data Analyst Intern",
       period: "May 2025",
       description: "Conduct customer analytics using segmentation and transactional data. Applied uplift modeling and A/B testing to evaluate marketing strategies. Generated actionable recommendations to improve business strategy.",
-      type: "Virtual Internship"
+      type: "Virtual Internship",
+      certificate: quantiumCert
     },
     {
       company: "Deloitte (Forage)",
       role: "Virtual Data Analytics Intern",
       period: "May 2025",
       description: "Performed Practical data challenges simulating industry scenarios and applied Forensic Technology Techniques. Gained insight into analytics for fraud detection and forensic Audits.",
-      type: "Virtual Internship"
+      type: "Virtual Internship",
+      certificate: deloitteCert
     },
     {
       company: "Tata Group (Forage)",
       role: "Virtual Data Visualization Intern",
       period: "April 2025 – May 2025",
       description: "Developed data visuals and dashboards to solve real business problems. Applied principles of effective data communication and storytelling. Interpreted complex datasets to translated analytical findings into visual storytelling.",
-      type: "Virtual Internship"
+      type: "Virtual Internship",
+      certificate: tataCert
     }
   ],
   projects: [
